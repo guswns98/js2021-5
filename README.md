@@ -2,12 +2,19 @@
 ##[03월23일]
 >오늘 배운 내용 요약 <br>
 ><ul>
-<p>변수 선언  (var, let, const)</p>
+<p><strong>변수 선언  (var, let, const)</strong></p>
 <li>>var -->  같은 이름의 변수 선언이 돼 있더라도 다시 선언해서 데이터를 할당</li>
 <li>let--> 변수의 중복 선언 x  변수의 할당된 데이터 변경 o </li>
 <li>const--> 변수의 중복 선언 x  변수의 할당된 데이터 변경 x<br></li>
-</ul>
->typeof --> 갑의 유형 , 자료형을 확인 할 때 사용
+</ul><br>
+<p><strong>typeof</strong> --> 갑의 유형 , 자료형을 확인 할 때 사용</p><br>
+<strong>NAN</strong>--> 숫자를 문자로 나누는등 말도안되는 수식을 작성할떄 사용 -->let IsNaN =10/"칠";
+
+
+
+
+
+
 
 
 #강현준[201840203]
