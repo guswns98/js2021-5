@@ -26,6 +26,7 @@
 
 ### 3.For 반복문
 <p>기본형태</p>
+
 ```jsx
 for(초기화식; 조건식; 증감식){
     실행 문장;
@@ -41,11 +42,13 @@ for(let i=0; i<=100; i++;){
 console.log(output);
 실행 결과 -->5050출력
 ```
+
 ---
 
 ### 4.For in 반복문
  for in 반복문은  **객체(오브젝트)에서 사용하는 반복문**
 <p>기본형태</p>
+
 ```jsx
     for(let 인덱스 in 배열){
         문장
@@ -64,10 +67,11 @@ console.log(output);
 ```
 
 
-# 강현준[201840203]
-## [03월23일]
->오늘 배운 내용 요약 <br>
-><ul>
+
+#  강현준[201840203]
+##  [03월23일]
+오늘 배운 내용 요약 <br>
+<ul>
 <p><strong>변수 선언  (var, let, const)</strong></p>
 <li>>var -->  같은 이름의 변수 선언이 돼 있더라도 다시 선언해서 데이터를 할당</li>
 <li>let--> 변수의 중복 선언 x  변수의 할당된 데이터 변경 o </li>
@@ -78,6 +82,7 @@ console.log(output);
 
 <br><p><strong>조건문 if</strong>-->조건에 부합 했을때 결과값 </p>
 <p><strong>else</strong>-->조건에 부합하지 않았을 떄 결과값 </p>
+
 ```jsx
 function testIf(data){
     if(data%3==0){
@@ -89,6 +94,7 @@ function testIf(data){
     }
 }
 ```
+
 -->if (조건) {트루일 떄 결과} 
     else if (조건2){조건2가 트루일 때 결과}
     else {모두 false일 때 결과}
