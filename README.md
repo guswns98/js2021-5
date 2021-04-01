@@ -1,7 +1,7 @@
 # [강현준 201840203]
 ## [03월30일]
 ### 1. 배열
-<p>기본 형태</p>
+기본 형태
 ```javascript
         let array=[52,1,'안녕','잘가',true,false]
         undefined
@@ -59,6 +59,7 @@ console.log(output);
 ### 5.For of 반복문
  for of 반복문은 **배열에서 사용하는 반복문**
 <p>기본형태</p>
+
 ```jsx
     for(let 요소 of 배열){
          객체의 프로퍼티의 개수만큼 반복적으로 실행하고자 하는 실행문
