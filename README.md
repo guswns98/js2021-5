@@ -14,7 +14,7 @@ console.log(output);
 ```
 ㄴ
 -실행결과 
-![결과](결과.png)
+![결과](./결과.png)
 ### 2. break 키워드<br>
 무한 반복을 빠져 나갈떄 쓰는 키워드
 ``` javascript
@@ -52,9 +52,9 @@ for (let i = 1; i<10; i++){
 + queue = 먼저 들어간것은 먼저 꺼내진다 FIFO(first in first out) 
 ---
 + stack 구조
-![stack](stack.png)
+![stack](./stack.png)
 + queue구조
-![queue](queue.png)
+![queue](./queue.png)
 
 + splice 함수
   -배열에서 특정 항목을 제거 할 때 사용
