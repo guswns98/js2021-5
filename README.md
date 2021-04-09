@@ -1,4 +1,75 @@
 # [강현준 201840203]
+## [04월06일]
+### 1. 중첩 반복문
+형태 
+```javascript
+let output = ""; // 변수
+   for (let i = 0; i < 10; i++) { //i는 0부터 9까지 i를 하나씩 증가시킨다.
+      for(let j = 0; j< i+1;j++){ //j는 0부터 i까지 j를 하나씩 증가시킨다.
+        output += "*"; //output에 있는 데이터에 *을 하나씩 추가
+    }
+    output +="\n"; //줄바꿈
+}
+console.log(output);
+```
+ㄴ
+-실행결과 
+![결과](결과.png)
+### 2. break 키워드<br>
+무한 반복을 빠져 나갈떄 쓰는 키워드
+``` javascript
+// 짝수를 찾으면 break키워드로 반복문을 벗어납니다.
+let i =0;
+let array = [1,31,273,57,8,11,32];
+let output;
+
+while (true) {
+ if (array[i] % 2 == 0){
+    output = array[i];
+    break;
+}
+    i=i+1; 
+}
+console.log(`처음 발견한 짝수는 ${output}입니다.`);
+```
+### 3. continue 키워드
+반복문 내부에서 현재 반복을 멈추고 다음 반복을 진행하게함
+```javascript
+
+for (let i = 1; i<10; i++){
+    if (i % 2 == 0) {
+        continue; //짝수라면 다음 반복으로 넘어감  -> 이 다음 코드는 실행x
+    }
+    console.log(i);
+}
+
+```
+### 4. 함수
+
++ push+pop => stack 사용가능
++ push+shift => queue 사용가능
++ stack = 먼저 넣은것은 나중에 꺼내진다 LIFO(last in first out)
++ queue = 먼저 들어간것은 먼저 꺼내진다 FIFO(first in first out) 
+---
++ stack 구조
+![stack](stack.png)
++ queue구조
+![queue](queue.png)
+
++ splice 함수
+  -배열에서 특정 항목을 제거 할 때 사용
+  -제거하는 과정에서 해당 원소가 몇번째인지 알려줘야함
+  -기존 배열 자체를 변경
+
++ slice 함수
+  -배열을 잘라낼 때 사용
+  -기존의 배열은 달라지지 않음 
+  -시작 인덱스와 종료 인덱스를 같은 값을 넣으면 빈 배열이 반환됨
+  
+
+ 
+
+# [강현준 201840203]
 ## [03월30일]
 ### 1. 배열
 기본 형태
