@@ -12,6 +12,7 @@ let output = ""; // 변수
 }
 console.log(output);
 ```
+ㄴ
 -실행결과 
 ![결과](결과.png)
 ### 2. break 키워드<br>
