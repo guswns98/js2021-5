@@ -27,6 +27,7 @@ product.회사 =>'삼성'
 ```
 ### 2.객체와 반복문 
 + for in 반복문을 이용해 객체 반복 적용
+
 ```javascript
 //객체 생성
 let object = {
@@ -39,8 +40,58 @@ for(let key in object){
 }    
 출력결과 => name:사과 price:1000
 ```
-### 3. 속성과 메소드 
 
+### 3. 속성과 메소드 
++ 요소 - 배열 내부에 있는 값 
++ 속성 - 객체 내부에 있는 값
++ 메소드 - 객체의 속성 중 자료형이 함수인 속성
+
+```javascript
+let object = {
+    name:'망고'
+    price:1200
+    print: function(){
+        console.log('$[this.name]의 가격은 $[this.price]원 입니다')
+    }
+};
+//메소드 호출
+object.print();
+```
+
++ this 키워드 - 자신이 가지고 있는 속성임을 표시 
+### 4. 생성자 함수와 프로토 타입
++ 생성자 함수 - 객체를 만드는 함수  , 대문자로 시작하는 이름을 사용
+
+```javascript
+//생성자 함수
+function Product(name,price){
+    this.name=name;
+    this.price=price;
+}
+//객체 생성
+let product = new Product("바나나",1200);
+//출력
+console.log(product);
+``` 
+
++ 프로토 타입 - 모든 함수가 가지고 있는 속성으로 해당 함수를 생성자 함수로 사용했을 때
++ 프로토 타입 메소드 생성
+
+```javascript
+//생성자 함수
+function Product(name,price){
+    this.name=name;
+    this.price=price;
+}
+//프로토타임 메소드 선언
+Product.prototype.print=function(){
+    console.log('$[product.name]의 가격은 $[product.price]원 입니다');
+};
+//객체 생성
+let product = new Product("바나나",1200);
+//출력
+console.log(product);
+```
 
 
 
