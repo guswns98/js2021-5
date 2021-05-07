@@ -47,6 +47,22 @@ if(nullValue == null)
 //      null은 존재하지 않는 값입니다.
 ```
 ### 3.기본 자료형과 객체 자료형의 차이
++ 공통점 : 속성과 메소드 사용가능
++ 차이점 : 기본자료형은 객체가 아니므로 속성과 메소드를 추가 할 수 없음
++ 기본 자료형에 속성 메소드 추가 방법 
+
+```javascript
+//변수선언
+let primitiveNumber = 273;
+//프로토 타입에 메소드 추가
+Number.prototype.method = function(){
+    return 'Primitive Method'
+};
+//메소드 실행
+console.log(primitiveNumber.method());
+//결과
+Primitive Method
+```
 
 
 # [강현준 201840203]
