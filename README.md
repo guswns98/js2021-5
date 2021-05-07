@@ -71,9 +71,9 @@ let numberFromLiteral = 273;
 let numberFromConstructor = new Number(273);
 ```
 + Number 객체의 메소드
-toExponential() => 숫자를 지수 표시로 나타낸 문자열을 리턴
-toFixed() => 숫자를 고정소수점 표시로 나타낸 문자열을 리턴
-toPrecision() => 숫자를 길이에 따라 지수 표시 또는 고정소수점 표시로 나타낸 문자열을 리턴
++ toExponential() => 숫자를 지수 표시로 나타낸 문자열을 리턴
++ toFixed() => 숫자를 고정소수점 표시로 나타낸 문자열을 리턴
++ toPrecision() => 숫자를 길이에 따라 지수 표시 또는 고정소수점 표시로 나타낸 문자열을 리턴
 
 
 
