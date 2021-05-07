@@ -1,4 +1,55 @@
 # [강현준 201840203]
+## [5월4일]
+### 1.프로토타입
++ **프로토 타입**- 모든 함수가 가지고 있는 속성으로 해당 함수를 생성자 함수로 사용했을 때
++ 프로토 타입 메소드 생성
+
+```javascript
+//생성자 함수
+function Product(name,price){
+    this.name=name;
+    this.price=price;
+}
+//프로토타임 메소드 선언
+Product.prototype.print=function(){
+    console.log('$[product.name]의 가격은 $[product.price]원 입니다');
+};
+//객체 생성
+let product = new Product("바나나",1200);
+//출력
+console.log(product);
+```
+
+### 2. 값을 확인하는 코드
+
+```javascript
+let zeroNumber = 0;
+let falseBoolean = '';
+let emptyString = '';
+let undefinedValue;
+let nullValue= null;
+
+if(zeroNumber == null)
+    console.log('은 존재하지 않는 값입니다.');
+
+if(falseBoolean == null)
+    console.log('false는 존재하지 않는 값입니다.');
+
+if(emptyString == null)
+    console.log('빈 문자열은 존재하지 않는 값입니다.');
+
+if(undefinedValue == null)
+    console.log('undefined는 존재하지 않는 값입니다.');
+
+if(nullValue == null)
+    console.log('null은 존재하지 않는 값입니다.');
+//결과  undefined는 존재하지 않는값입니다.
+//      null은 존재하지 않는 값입니다.
+```
+### 3.기본 자료형과 객체 자료형의 차이
+
+
+# [강현준 201840203]
 ## [4월27일]
 ### 1.객체
 + 객체기본 - 객체는 여러 개의 자료형을 한번에 저장하는 자료형
@@ -74,24 +125,7 @@ let product = new Product("바나나",1200);
 console.log(product);
 ``` 
 
-+ **프로토 타입**- 모든 함수가 가지고 있는 속성으로 해당 함수를 생성자 함수로 사용했을 때
-+ 프로토 타입 메소드 생성
 
-```javascript
-//생성자 함수
-function Product(name,price){
-    this.name=name;
-    this.price=price;
-}
-//프로토타임 메소드 선언
-Product.prototype.print=function(){
-    console.log('$[product.name]의 가격은 $[product.price]원 입니다');
-};
-//객체 생성
-let product = new Product("바나나",1200);
-//출력
-console.log(product);
-```
 
 
 
