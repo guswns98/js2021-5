@@ -1,3 +1,96 @@
+# [강현준201840203]
+## [5월11일]
+### 1.Date객체
++ new Date() - 현재시간으로  Date 객체를 생성
++ new Date(<유닉스 타임>) - 유닉스타임(1970년 1월 1일 00시 00분 00초로부터 경과한 밀리초)으로 객체 생성
++ new Date(<시간 문자열>) - 문자열로 Date객체 생성
++ new Date(<년>,<월-1>,<일>,<시간>,<분>,<초>,<밀리초>) - 시간요소를 기반으로 Date객체를 생성
++ Date 객체 생성
+```javascript
+let dateA = new Date();
+console.log(dateA);
+
+let dateB = new Date(6313454231);
+console.log(dateB);
+
+let dateC = new Date("December 9 , 19991 21:30:00");
+console.log(dateC);
+
+let dateD = new Date(1991,12-1,9,21,30,0,0);
+console.log(dateD);
+```
+### 2.Array 객체 
++ concat() - 매개 변수로 입력한 배열의 요소를 모두 합쳐 배열을 만들어 리턴
++ join() - 배열안의 모든 요소를 문자열로 만들어 리턴
++ pop()* - 배열의 마지막 요소를 제거하고 리턴
++ push()* - 배열의 마지막 부분에 새로운 요소를 추가
++ reverse()* - 배열의 요소 순서를 뒤집음
++ slice() - 배열 요소의 지정한 부분을 리턴
++ sort()* - 베열 요소를 정렬
++ splice()* - 배열 요소의 지정한 부분을 삭제하고 삭제한 요소를 리턴
+### 3. ECMAScript5에서 추가된 메소드
++ forEach() - 배열의 요소를 하나씩 뽑아 반복을 돌림
++ map() - 콜백 함수에서 리턴하는 것을 기반으로 새로운 배열을 만듬
++ filter() - 콜백 함수에서 true를 리턴하는 것으로만 새로운 배열을 만들어 리턴
+```javascript
+[52,273,32].forEach((item, index) =>{
+
+}); // ECMAScript5에 추가된 Array 객체의 메소드 콜백 함수 형태
+```
++ 프로토타입에 메소드 추가
+```javascript
+String.prototype.contain=function(input){
+    return this.index0f(input) >= -1;
+}
+
+console.log('안녕하세요'.contain('안녕'));
+console.log('안녕하세요'.contain('빙그르르'));
+```
+### 4. JSON 객체
++ 문자열은 큰따옴표로 만들어야함
++ 모든 키는 큰따옴표로 감싸야함
++ 숫자, 문자열, 불 자료형만 사용 할 수 있음
++ JSON.stringify(<객체>,<변환함수>,<공백갯수>) - 자바스크립트 객체를 문자로 만듬
++ JSON.parse(<문자열>) - 문자열을 자바스크립트 객체로 파싱
+
+### 5.예외처리
++ TypeError를 기본 예외 처리로 처리
+```javascript
+//함수 선언
+function callTenTimes(callback){
+    if(callback){
+        for(let i = 0; i<10; i++){
+            callback();
+        }
+    }else{
+        console.log(`매개 변수 callback이 지정되지 않았습니다.`);
+    }
+}
+//정상 실행
+callTenTimes(function () {console.log(`안녕하세요`);});
+//예외 발생
+callTenTimes();
+```
++ try catch finally
+```javascript
+try{
+    //예외가 발생하면
+} catch (exception){
+    //여기서 처리합니다.
+} finally {
+    //여기는 무조건 실행됩니다.
+} // catch finally 구문 필요 없으면 생략 가능
+```
++ 에외 강제 발생
+```javascript
+//예외 객체 만듦
+const error = new Error('메시지');
+error.name = '내 마음대로 오류';
+error.message = '오류 메시지';
+//예외 발생
+throw error;
+```
+
 # [강현준 201840203]
 ## [5월4일]
 ### 1.프로토타입
