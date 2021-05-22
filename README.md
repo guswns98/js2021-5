@@ -13,8 +13,73 @@
 + exit([exitCode=0]) - 프로그램 종료
 + memoryUsage() - 메모리 사용정보 객체를 리턴
 + uptime() - 현재 프로그램이 실행된 시간을 리턴 
+### 4.os모듈 
++ 모듈 사용 추출
 
+```javascript
+const os = require('os');
+```
 
+##### os모듈 메소드
++ hostname() - 운영체제의 호스트이름을 리턴
++ type() - 운영체제의 이름을 리턴
++ platform() - 운영체체의 플랫폼을 리턴
++ arch() - 운영체제의 아키텍처를 리턴
++ release() - 운영체제의 버전을 리턴
++ uptime() - 운영체제의 실행된 시간을 리턴
++ loadavg() - 로드에버리지 정보를 담은 배열을 리턴
++ totalmem() - 시스템의 총 메모리를 리턴
++ freemem() - 시스템의 사용 가능한 메모리를 리턴
++ cpus() - cpu의 정보를 담은 객체를 리턴
++ getNetworkInterfaces() - 네트워크 인터페이스의 정보를 담은 배열을 리턴
+### 5. url 모듈
++ 모듈 추출
+
+```javascript
+const url = require('url');
+```
+
+##### url모듈 메소드
++ parse(urlStr[,parseQueryString=false,slashesDenoteHost=false]) - URL 문자열을 URL 객체로 변환해 리턴
++ format(urlObj) - URL 객체를 URL 문자열로 변환해 리턴
++ resolve(from,to) - 매개변수를 조합하여 완전한 URL 문자열을 생성해 리턴
+
+### 6.File System 모듈
+##### 추출 방법
+```javascript
+const fs = require('fs');
+```
+##### 파일 읽기
++ fs.readFileSync(<파일 이름>) - 동기적으로 파일을 읽음
++ fs.readFile(<파일 이름>,<콜백 함수>) - 비동기적으로 파일을 읽음
+##### 비동기 처리 장점
++ 웹 서버를 C++로 만드렴ㄴ 빠르지만, 개발과 유지보수가 어려움.
++ 프로그래밍 언어자체는 느리지만 개발 속도와 유지 보수성이 좋음.
++ 손쉽게 비동기 처리를 구현하여 빠른 처리가 가능.
+##### 파일쓰기
++ fs.writeFileSync(<파일 이름>,<문자열>) - 동기적으로 파일을 씀
++ fs.writeFile(<파일 이름>,<문자열>,<콜백 함수>) - 비동기적으로 파일을 씀
+##### 노드패키지
++ 패키지 매니저 모듈 관리 프로그램을 사용해 모듈 쉽게 설치 가능
++ Node.js는 npm(Node.js Package Manager)패키지 매니저를 사용
++ 외부 모듈 설치
+##### request 모듈
++ 웹 요청을 쉽게 만들어주는 모듈 
++ 설치 명령어 -> npm install request
+
+```javascript
+//모듈 추출
+const request = requir(`request`);
+//request 모듈 사용
+const url = `http://www.hanbit.co.kr/store/books/new_book_list.html`;
+request(url,(error,response,body) => {
+    console.log(body)
+});
+```
+##### cheeio 모듈
++ request 모듈로 가져온 웹 페이지는 단순한 HTML 문자열
++ cheerio 모듈 - 가져온 웹 페이지의 특정 위치에서 손쉽게 데이터를 추출
++ 설치 명령어 - npm install cheerio
 
 
 # [강현준201840203]
