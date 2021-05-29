@@ -36,7 +36,30 @@ app.listen(55273,()=>){
 + put(path,callback) - PUT 요청이 발생했을때 이벤트 리스너 지정
 + delete(path,callback) - DELETE 요청이 발생했을때 이벤트 리스너 지정
 + all(path,callback) - 모든 요청이 발생했을때 이벤트 리스너 지정
-
+```javascript
+//모듈 추출
+const express = new require('express');
+//서버 생성
+const app = expresss();
+//request 이벤트 리스너 설정
+app.get('/page/:id',(request,response)=>{
+    //토큰꺼냄
+    cosnst id = request.params.id;
+    //응답
+    response.send('<h1>Hello express</h1>');
+});
+//서버 실행
+app.listen(55273,()=>){
+    console.log('Server running at http://127.0.0.1:52273')
+});
+```
+### 4. 요청과 응답
++ response 객체의 메소드
++ send() - 데이터 본문을 제공 / 가장 마지막에 실행 , 두 번 실행 x
++ status() - 상태코드 제공
++ set() - 헤더 설정
+- 서버가 Content-Type을 제공 : 웹 브라우저는 헤더를 확인, 제공된 데이터의 형태를 확인       (MIME라는 문자열로 제공)
++ ㄴㅁㅇㄴㅁㅇ
 
 # [강현준201840203]
 ## [5월18일]
