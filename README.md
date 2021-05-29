@@ -9,6 +9,34 @@ $ npm install express@4
 + 서버 - 응답 대상
 + 요청 메시지 - 클라이언트가 서버로 보내는 메시지
 + 응답 메시지 - 서버가 클라이언트로 보내는 메시지
+### 2. express 모듈을 사용한 서버 생성과 실행
++ express 모듈의 기본 메소드
++ express() - 서버 애플리케이션 객체 생성
++ app.use() - 요청이 왔을 때 실행할 함수를 지정
++ app.listen() - 서버 실행
+```javascript
+//모듈 추출
+const express = new require('express');
+//서버 생성
+const app = expresss();
+//request 이벤트 리스너 설정
+app.use((request,response)=>{
+    response.send('<h1>Hello express</h1>');
+});
+//서버 설정
+app.listen(55273,()=>){
+    console.log('Server running at http://127.0.0.1:52273')
+});
+```
+### 3.페이지 라우팅
++ 클라이언트 요청에 적절한 페이지를 제공하는 기술
++ express 모듈의 페이지 라우팅 메소드
++ get(path,callback) - GET 요청이 발생했을때 이벤트 리스너 지정
++ post(path,callback) - POST 요청이 발생했을때 이벤트 리스너 지정 
++ put(path,callback) - PUT 요청이 발생했을때 이벤트 리스너 지정
++ delete(path,callback) - DELETE 요청이 발생했을때 이벤트 리스너 지정
++ all(path,callback) - 모든 요청이 발생했을때 이벤트 리스너 지정
+
 
 # [강현준201840203]
 ## [5월18일]
