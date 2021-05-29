@@ -58,8 +58,32 @@ app.listen(55273,()=>){
 + send() - 데이터 본문을 제공 / 가장 마지막에 실행 , 두 번 실행 x
 + status() - 상태코드 제공
 + set() - 헤더 설정
-- 서버가 Content-Type을 제공 : 웹 브라우저는 헤더를 확인, 제공된 데이터의 형태를 확인       (MIME라는 문자열로 제공)
-+ ㄴㅁㅇㄴㅁㅇ
++ 서버가 Content-Type을 제공 - 웹 브라우저는 헤더를 확인, 제공된 데이터의 형태를 확인       (MIME라는 문자열로 제공)
+##### MIME형식
++ text/plain 기본적인 텍스트 
++ text/html html데이터 의미
++ image/png png데이터 의미 
++ audio/mpe MP3음악 파일 의미
++ video/mpeg MPEG 비디오 파일 의미 
++ application/json json 데이터를 의미 
++ multipart/form-data 입력 양식 데이터 의미
+##### Content-Type 지정 메소드
++ type() - Content-Type을 MIME 형식으로 지정
+##### HTTP 상태코드
++ 1xx - 처리중
++ 2xx - 성공
++ 3xx - 리다이렉트
++ 4xx - 클라이언트 오류
++ 5xx - 서버오류
+##### 주소분석
++ 프로토콜 - HTTPS 통신에 사용되는 규칙을 의미 
++ 호스트 - (search.)naver.com 애플리케이션 서버의 위치를 의미
++ URL - search.naver 애플리케이션 서버 내부에서 라우트 위치를 나타냄 
++ 요청 매개 변수 - ?where~~~~utf8 추가적인 정보 의미
+### 5. 미들웨어
+
+
+
 
 # [강현준201840203]
 ## [5월18일]
