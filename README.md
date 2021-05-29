@@ -1,6 +1,6 @@
 # [강현준201840203]
 ## [5월25일]
-### 1.express 모듈
+### 1. express 모듈
 + 모듈설치
 ```javascript
 $ npm install express@4
@@ -28,7 +28,7 @@ app.listen(55273,()=>){
     console.log('Server running at http://127.0.0.1:52273')
 });
 ```
-### 3.페이지 라우팅
+### 3. 페이지 라우팅
 + 클라이언트 요청에 적절한 페이지를 제공하는 기술
 + express 모듈의 페이지 라우팅 메소드
 + get(path,callback) - GET 요청이 발생했을때 이벤트 리스너 지정
@@ -81,6 +81,31 @@ app.listen(55273,()=>){
 + URL - search.naver 애플리케이션 서버 내부에서 라우트 위치를 나타냄 
 + 요청 매개 변수 - ?where~~~~utf8 추가적인 정보 의미
 ### 5. 미들웨어
++ 미들웨어 설정 메소드
+```javascript
+use()
+```
++ 설치
+```javascript
+npm install morgan
+```
++ 로그 - 관련 정보를 가진 글자
++ 로그 출력 미들웨어 - 웹 요청과 관련된 내용을 출력하는 미들웨어
++ body-parser - 요청 본문을 분석
+##### url 사용한 요청
++ 'http://localhost:52273/books/:id'형태로 라우트하면 :id부분을 + 변경해서 데이터 전달
++ URL에 요청 매개 변수를 입력하면 추가적인 정보를 객체 형태로 전달
++ URL을 사용한 요청은 주소에 정보가 남는다는 단점이 있음
++ 요청 본문 사용: 주소에 기록을 남기지 않고 데이터를 전달 가능
+##### 요청본문 종류
++ application/x-www-from-urlencoded 웹 브라우저에서 입력 양식을 POST, PUT,DELETE방식 등으로 전달 할 때 사용하는 기본적인 요청 형식 
++ application/json JSON - 데이터로 요청하는 방식 
++ multipart/form-data - 대용량 파일을 전송할 때 사용하는 요청 방식
+### 6. RESTful 웹서비스 개요
+###### 웹서비스 구조
++ GET 컬렉션을 조회 / 컬렉션의 특정 요소를 조회 POST 컬렉션에 새로운 데이터 추가 / 요소 사용 X PUT 컬렉션 전체를 한꺼번에 변경 / 컬렉션의 특정 요소 수정 DELETE 컬렉션 전체를 삭제 / 컬렉션의 특정 요소를 삭제 EX) GET /user/273 : 273번 사용자를 조회
+###### RESTful 웹 서비스
++ GET 모든 사용자 정보 조회 POST 사용자를 추가 GET 특정 사용자 정보 조회 PUT 특정 사용자 정보 수정 DELETE 특정 사용자 정보 제거
 
 
 
