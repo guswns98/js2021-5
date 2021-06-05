@@ -1,9 +1,80 @@
 # [201840203]
 ## [6월2일]
-### 1.
+### 1. 사용할 수 없는 코드
++ let 키워드 const 키워드 
++ 최신 버전 자바 스크립트
+    - 최신
+    ```javascript
+    let variable = 273; const constant = "Hello  World";
+    ```
++ 인터넷 익스플로러에 사용해야 하는 코드
+    - 인터넷익스플로러
+    ```javascript
+    var variableA = 273; var variable = "Hello World";
+    ```
++ 구 버전 웹 브라우저에선 템플릿 문자열 사용 x
++ 템플릿문자열
+    - 최신 
+    ```javascript
+     let variable = 273; console.log(변수의 값은 $         {variable입니다.);
+     ```
+    - 인터넷익스플로러 
+    ```javascript
+     var variable = 273; console.log(변수의 값은 ' + variable + ' 입니다.);
+     ```
++ 화살표 함수
+    - 최신  
+    ```javascript
+    const functionLiteral = () => {
+    };
+    ```  
+    - 인터넷익스플로러 
+    ```javascript
+     const functionLiteral = function(){
+    };
+    ```
++ for of 반복문 
+    - 최신
+    ```javascript
+    const array = ['가','나','다'];
 
+    for (let item of array) {
+        console.log(item);
+    }
+    ```
+    - 인터넷익스플로러
+    ```javascript
+    var array = ['가','나','다'];
 
+    for (var item in array) {
+        console.log(array[i]);
+    }
+    ```
++ 사용할 수 없는 메소드를 사용한 코드
+    - 최신
+    ```javascript
+    const array = [1,2,3,4,5];
 
+    array.forEach((item,index) => {
+    console.log(`$(item): $(index)`);
+    });
+    ```
+    - 인터넷익스플로러
+    ```javascript
+    var array = [1,2,3,4,5];
+
+    for (var i = 0; i < array.length; i++){
+    var index = i;
+    var item = array[i];
+    console.log(item+':'+ index);
+    }
+    ```
+### 2. Window 객체
++ 새로운 화면을 열거나 웹브라우저의 크기를 변경
++ 경고창 프롬프트 제공
++ 경고 함수와 입력함수
+    - alert - (<메시지>) 경고창을 출력
+    - prompt - (<메시지>,<임시 글자>) 프롬프트를 출력
 
 
 
