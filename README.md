@@ -75,8 +75,53 @@
 + 경고 함수와 입력함수
     - alert - (<메시지>) 경고창을 출력
     - prompt - (<메시지>,<임시 글자>) 프롬프트를 출력
-
-
+### 3. screen 객체
++ 웹 브라우저에서 공통으로 활용할 수 있는 속성
+    - width - 화면의 너비
+    - height - 화면의 높이 
+    - availWidth - 실제 화면에서 사용 가능한 너비 
+    - availHeight - 실제 화면에서 사용 가능한 높이 
+    - colorDepth - 사용 가능한 색상 수 pixelDepth 한 픽셀당 비트 수
+### 4. location 객체와 history 객체 
++ 웹 브라우저에서 공통으로 활용할 수 있는 속성
+    - href - 문서의 URL 주소 
+    - host - 호스트 이름과 포트 번호 ex)localhost:52273 
+    - hostname - 호스트 이름 ex)localhost port 포트 번호 ex)52273 
+    - pathname - 디렉토리 경로 ex)/forder/HTMLpage.html 
+    - hash - 앵커 이름(#~) ex)#test 
+    - search - 요청 매개 변수 ex)?param=10 
+    - protocol - 프로토콜 종류 ex)http: 
+    <br>
++ location  객체 메소드
+    - assign(<링크>) - 매개 변수로 전달한 위치로 이동 
+    - reload() - 새로고침 
+    - replace() - 매개 변수로 전달한 위치로 이동(뒤로 가기 불가능)
++ history 객체 메소드
+    - forward() - 앞으로 이동
+    - back() - 뒤로 이동
+### 5. navigator 객체
++ 사용자의 웹 브라우저 운영체제를 구분 가능
++ navigator 객체의 속성
+    - appCodeName - 웹 브라우저의 코드 이름 
+    - appName - 웹 브라우저의 이름 
+    - appVersion - 웹 브라우저의 버전 
+    - platform - 사용 중인 운영체제의 시스템 환경 
+    - userAgent - 웹 브라우저의 전체적인 정보
+### 6. jQuery 객체
++ 라이브러리 $ 함수 활용
++ $ 함수의 매개변수에는 문서객체, CSS 형식 ,HTML 형식의 문자열을 삽입
++ $(<매개 변수>).메소드(<매개 변수>,<매개 변수>)
++ 문서 객체 선택
+    - 객체 탐색 메소드
+        - parent() - 부모 태그를 선택
+        - find() - 후손 태그 탐색
++ 문서 객체 개별 조작 
+    - 선택된 문서 객체의 수 
+        - length - 선택된 문서 객체의 수를 구함
+    - 선택된 문서 객체 추출
+        - get() - 선택한 문서 객체 중 하나를 선택
+    - 선택된 문서 객체 반복 적용
+        - each() - 선택된 문서 객체에 반복을 적용
 
 # [강현준201840203]
 ## [5월25일]
